@@ -594,13 +594,11 @@ body {
   right: 8px;
   width: 30px;
   height: 30px;
+  font-weight: 700;
   background-color: var(--brand-color-white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  transition-property: transform;
-  transition-duration: 500ms;
-  transition-timing-function: ease;
 }
 .is-hidden {
   opacity: 0;
