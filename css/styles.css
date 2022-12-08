@@ -90,10 +90,10 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
- .menu-active{
+.menu-active {
   position: relative;
 }
-.menu-active::after{
+.menu-active::after {
   content: '';
   position: absolute;
   display: block;
@@ -525,4 +525,85 @@ body {
 .portfolio-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-item:hover .portfolio-image-overlay {
+  transform: translatex(0);
+}
+.portfolio-image-overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 45px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translatey(100%);
+  transition: transform 250ms ease;
+}
+.portfolio-image-overlay > p {
+  color: var(--brand-color-white);
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Okno modalne */
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.is-hidden .modal {
+  transform: translate(-50%, -100%) rotatex(90deg);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--brand-color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+/* .close-btn {
+  transform: translate(-50%, -100%) rotatex(90deg);
+} */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--brand-color-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

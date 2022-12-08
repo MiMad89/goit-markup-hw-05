@@ -74,7 +74,7 @@
         <div class="container hero">
           <h1 class="text-bg">Efektywne rozwiązania dla naszego biznesu</h1>
           <div class="bg-button">
-            <button class="text-button" type="button">Zamów usługę</button>
+            <button class="text-button" type="button" data-modal-open>Zamów usługę</button>
           </div>
         </div>
       </section>
@@ -404,6 +404,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- Okno modalne -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>X</button>
+      </div>
+    </div> 
+
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
