@@ -600,6 +600,6 @@ body {
   pointer-events: none;
 }
 .close-button{
-  stroke: var(--brand-color-black);
+  stroke: var(--brand-background-icon);
   fill: var(--brand-color-white);
 }
